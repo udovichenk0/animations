@@ -21,6 +21,7 @@
       height: 600px;
       overflow: hidden;
       position:absolute;
+      transition: all 0.3s;
     }
     .card {
       box-sizing: border-box;
@@ -74,6 +75,20 @@
       }
     }
   </style>
+  <script>
+    document.addEventListener('mousemove', (event) => {
+      const card = document.querySelector('.card-wrapper')
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+      const cardX = card.getBoundingClientRect().left + card.offsetWidth / 2;
+      const cardY = card.getBoundingClientRect().top + card.offsetHeight / 2;
+
+      const offsetX = (mouseX - cardX) / 50;
+      const offsetY = (mouseY - cardY) / 30;
+      
+      card.style.transform = `translate(${offsetX}px, ${offsetY}px)`
+    })
+  </script>
   <div class="card-wrapper">
     <div class="card" id="card">
       <div class="content"></div>
