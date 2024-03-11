@@ -34,7 +34,7 @@
         opacity: var(--opacity);
       }
       100% {
-        transform: translateY(200px);
+        transform: translateY(900px);
         opacity: 0;
       }
     }
@@ -45,7 +45,7 @@
       div.classList.add('star')
       const screenWidth = document.body.offsetWidth
       const a = Math.random()
-      const duration = a < 0.4 ? 15 : 12 
+      const duration = a < 0.4 ? 25 : 22 
       let size = a < 0.4 ? 1 : 2
       let opacity = a < 0.4 ? 0.5 : 1
 
@@ -58,7 +58,7 @@
       document.body.removeChild(div)
      }, duration * 1000)
     }
-    setInterval(star, 400)
+    setInterval(star, 200)
   </script>
 </body>
 </html>
